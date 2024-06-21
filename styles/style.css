@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  margin: 30px;
+  text-align: center;
+}
+
+.day {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.day .screen {
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  background-color: rgb(235, 235, 235);
+}
+
+.day .info {
+  display: grid;
+  place-items: start;
+  gap: 20px;
+}
+
+.day .info .challenge {
+  width: 100%;
+  padding: 30px;
+  background-color: black;
+  color: white;
+}
+
+.day .info .description {
+  padding: 30px;
+}
+
+.day .info .techs {
+  margin: auto;
+}
+
+.day .info .techs ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 33.3333333333vw;
+  justify-content: space-evenly;
+}
+
+.day .info .techs ul img {
+  width: 48px;
+}
+
+.day .info .repository {
+  display: flex;
+  align-items: center;
+  place-self: end;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: black;
+  color: white;
+}
+
+.day .info .repository:hover {
+  opacity: 0.8;
+}
+
+.day .info .repository svg {
+  fill: white;
+}
+
+@media (max-width: 800px) {
+  .day {
+    grid-template-columns: 1fr;
+  }
+  .day .info .techs ul {
+    width: 50vw;
+  }
+}/*# sourceMappingURL=style.css.map */

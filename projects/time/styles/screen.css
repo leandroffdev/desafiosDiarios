@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Ds-digi';
+    src: url(../fonts/ds_digital/DS-DIGIB.TTF);
+    font-weight: 600;
+}
+.day .screen {
+    display: grid;
+    place-items: center;
+    font-family: 'Ds-digi';
+    font-size: 8rem;
+    background: linear-gradient(45deg, rgb(28, 37, 167), rgb(144, 144, 180), rgb(3, 3, 250));
+    color: white;
+    line-height: calc(100vh / 2);
+}
+#screen {
+    line-height: calc(100vh);
+}
+/* @media (max-width: 50rem) {} */

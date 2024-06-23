@@ -1,24 +1,35 @@
-// Positioning
-.title {
-    margin: 30px;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
 }
 .day {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-.day .screen {
-    display: grid;
-    place-items: center;
-    min-height: 300px;
-    padding: 30px;
-    background-color: rgb(235, 235, 235);
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    width: 100%;
 }
 .day .info {
+    display: flex;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.day .info h4,
+.day .info p {}
+
+.day .info {
     display: grid;
-    place-items: start;
     gap: 20px;
-    
 }
 .day .info .challenge {
     width: 100%;
@@ -29,15 +40,12 @@
 .day .info .description {
     padding: 30px;
 }
-.day .info .techs {
-    margin: auto;
-}
+.day .info .techs {}
 .day .info .techs ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    width: calc(100vw / 3);
-    justify-content: space-evenly;
+    padding: 20px;
 }
 .day .info .techs ul img {
     width: 48px;
@@ -55,16 +63,20 @@
     color: white;
 }
 .day .info .repository:hover {
-    opacity: .8;
+    opacity: 0.8;
 }
 .day .info .repository svg {
     fill: white;
 }
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
     .day {
         grid-template-columns: 1fr;
     }
-    .day .info .techs ul {
-        width: calc(100vw / 2);
+    .day .info {
+        align-items: start;
+    }
+    .day .info h4,
+    .day .info p {
+        padding: 1rem;
     }
 }

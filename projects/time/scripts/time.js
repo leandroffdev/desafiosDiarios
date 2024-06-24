@@ -6,8 +6,12 @@ function watch() {
     const hour = data.getHours();
     const minutes = data.getMinutes();
     const seconds = data.getSeconds();
+    // Format numbers
+    function formatNumber(number) {
+        return number.toString().padStart(2, '0');  // ex.: 00:00:00
+    }
     // join all in one
-    const time = hour + ':' + minutes  + ':' + seconds;
+    const time = formatNumber(hour) + ':' + formatNumber(minutes)  + ':' + formatNumber(seconds);
     // sets the new data
     document.querySelector('.screen').innerHTML = time;
 }

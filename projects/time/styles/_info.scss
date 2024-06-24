@@ -29,8 +29,9 @@ a {
             background-color: black;
             color: white;
         }
+        .title, 
         .description {
-            padding: 30px;
+            padding-left: 30px;
         }
         .techs ul {
             display: flex;
